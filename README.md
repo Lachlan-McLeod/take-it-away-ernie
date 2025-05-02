@@ -1,7 +1,5 @@
-Take it Away Ernie!
+This is my final project submission Take It Away Ernie for Dev Academy.
 
-1. Clone repo down
-2. cd take-it-away-ernie/
-3. npm install
-4. npm install multer
-5. npm install @mui/material @emotion/react @emotion/styled
+The web app lets a user plan a magical journey themed off Harry Potter.
+
+I was the product owner for this project. The code I worked on was the encounters. I made the snitch mini game, the quiz and the other random encounters and linked them all to every page required within the app.
