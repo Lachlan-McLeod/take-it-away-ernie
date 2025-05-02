@@ -1,0 +1,111 @@
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+
+export const seed = async function (knex) {
+  await knex('events').insert([
+    {
+      id: 1,
+      name: 'Pixies steal your luggage!',
+      description: 'Oh no a band of pixies has stolen your luggage!',
+      image: '/images/encounters/image1.jpeg',
+      event_type: 'nothing',
+      complete_description: 'Pixies! A small pesky band of which stole your luggage! Lucky you managed to fight them off and get it back!',
+      timeout: 0,
+      speed_change: 1,
+    },
+    {
+      id: 2,
+      name: 'A flock of owls pass overhead',
+      description: 'Look at the pretty owls',
+      image: '/images/encounters/image2.jpg',
+      event_type: 'nothing',
+      complete_description: 'elegant flock of owls, who swooped overhead.',
+      timeout: 0,
+      speed_change: 1,
+    },
+    {
+      id: 3,
+      name: 'Old Lady',
+      description: 'Little old lady crossing road, you must wait. Click the button below to start your countdown!',
+      image: '/images/encounters/image3.png',
+      event_type: 'wait',
+      complete_description: 'Old Lady, whom you narrowly missed and let cross the road, great patience!',
+      timeout: 10,
+      speed_change: 1,
+    },
+    {
+      id: 4,
+      name: 'Quiz',
+      description: 'Correct answer needs to be selected to continue travel',
+      image: '/images/encounters/door.gif',
+      event_type: 'quiz',
+      complete_description: 'Quizmaster, who you beat! Nice!',
+      timeout: 0,
+      speed_change: 1,
+    },
+    {
+      id: 5,
+      name: 'Catch the snitch',
+      description: 'You have to catch the snitch!',
+      image: '/images/encounters/image5.jpeg',
+      event_type: 'game',
+      complete_description: 'elusive golden snitch! You managed to snag it out of the air, a seeker you may become!',
+      timeout: 0,
+      speed_change: 1,
+    },
+    {
+      id: 6,
+      name: 'Dementor',
+      description: 'Oh no, a dementor has entered the train.',
+      image: '/images/encounters/image6.jpeg',
+      event_type: 'nothing',
+      complete_description: 'Dementors. You managed to wizz up a powerful Patronus and save the day!',
+      timeout: 0,
+      speed_change: 1,
+    },
+    {
+      id: 7,
+      name: 'Felix Felicis',
+      description:
+        'You found some Felix Felicis your journey is twice as quick!',
+      image: '/images/encounters/image7.png',
+      event_type: 'speed',
+      complete_description: 'Felix Felicis potion! You feel much more restful after a strangely quick journey?',
+      timeout: 0,
+      speed_change: 2,
+    },
+    {
+      id: 8,
+      name: 'Butterbeers',
+      description:
+        "You had too many butterbeers, wait 20 seconds before you start moving again or you'll be sick.",
+      image: '/images/encounters/image8.jpg',
+      event_type: 'wait',
+      complete_description: 'Leaky Cauldron, where you indulged in a few too many butterbeers....',
+      timeout: 20,
+      speed_change: 1,
+    },
+    {
+      id: 9,
+      name: 'Vernon Dursley',
+      description: "Vernon Dursley won't let you leave. What do you do?",
+      image: '/images/encounters/image9.jpg',
+      event_type: 'quiz',
+      complete_description: 'Uncle no one dreams of having. You managed to get out of there, one way or another....',
+      timeout: 0,
+      speed_change: 1,
+    },
+    {
+      id: 10,
+      name: 'Muggle',
+      description: 'A muggle has spotted you. What do you do?',
+      image: '/images/encounters/image10.jpeg',
+      event_type: 'quiz',
+      complete_description: 'muggles, but your magical prowess meant nothing was discovered.',
+      timeout: 0,
+      speed_change: 1,
+    },
+  ])
+}
